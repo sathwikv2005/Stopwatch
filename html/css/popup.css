@@ -1,0 +1,157 @@
+:root {
+	--main-color: #0f0f1a;
+	--table-bg-color: #4b4545;
+	--banner-gradient: rgba(15, 15, 26, 0.1);
+	--hover-black: #424242;
+	--box-shadow: 10px 10px 30px 15px rgba(0, 0, 0), -10px -10px 30px 15px rgba(0, 0, 0);
+	--active: #04aa6d;
+}
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+body,
+html {
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+}
+
+body {
+	width: 250px;
+	height: 400px;
+	max-height: 410px;
+	background-color: var(--main-color) !important;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.time {
+	position: relative;
+	top: 70px;
+	color: white;
+	font-size: 40px;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	top: 30px;
+	align-items: center;
+}
+
+#playbuttonimg {
+	position: relative;
+	left: 70px;
+}
+
+#timer_playbuttonimg {
+	position: relative;
+	left: 70px;
+}
+
+.cbutton {
+	position: relative;
+	bottom: 20px;
+	padding-left: 25px;
+}
+.button {
+	position: relative;
+	bottom: 20px;
+	padding: 25px;
+}
+
+.flagtext {
+	position: relative;
+	color: white;
+	font-size: large;
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-bottom: 10px;
+	top: 10px;
+}
+
+.flag {
+	position: relative;
+	color: white;
+	font-size: large;
+	padding-left: 30px;
+	padding-bottom: 30px;
+	top: 10px;
+}
+
+.button:hover {
+	cursor: pointer;
+	transform: translateY(-3px) scale(1.05) translateZ(0);
+}
+.cbutton:hover {
+	cursor: pointer;
+	transform: translateY(-3px) scale(1.05) translateZ(0);
+}
+.inputbox {
+	position: relative;
+	max-width: 18%;
+	bottom: 5px;
+}
+
+li:hover {
+	background-color: #2e2e2e;
+	background-size: 100% 100%;
+	text-decoration: none;
+	animation: spring 300ms ease-out;
+	color: white;
+	font-weight: bold;
+}
+li a {
+	align-items: center;
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+ul {
+	position: relative;
+	left: 35%;
+	max-height: 40px;
+	border-radius: 2%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+li {
+	padding: 5px;
+	float: right;
+}
+
+a {
+	padding: 5px;
+}
+
+li a {
+	display: block;
+	text-transform: uppercase;
+	cursor: pointer;
+	color: #ebebeb;
+	margin: auto;
+	font-size: 10px;
+	text-decoration: none;
+	text-align: center;
+	text-decoration: none;
+}
+
+.active {
+	background-color: #04aa6d;
+}
+.donate {
+	width: 80%;
+	color: white;
+	font-size: large;
+}
+.donatelink {
+	color: white;
+	font-size: medium;
+}
+.donatecontainer {
+	position: relative;
+	padding-top: 100px;
+}

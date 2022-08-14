@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Stopwatch And Timer</title>
+		<link rel="stylesheet" href="./css/popup.css" />
+	</head>
+	<body>
+		<ul>
+			<li><a href="/html/donate.html" class="active">Donate</a></li>
+		</ul>
+		<div class="container" style="width: 100%; height: 100%">
+			<div style="width: 100%; height: 50%" class="timer">
+				<center>
+					<span id="timer_tracker" class="time" style="width: 100%; height: 100%">00:00:00</span>
+				</center>
+			</div>
+			<div class="buttons">
+				<img
+					src="../assets/flag32.png"
+					id="flagbuttonimg"
+					class="flag-button button"
+					style="display: none"
+				/>
+				<img src="../assets/play.png" id="playbuttonimg" class="play cbutton" />
+				<img
+					src="../assets/play32.png"
+					id="play32buttonimg"
+					class="play32 button"
+					style="display: none"
+				/>
+				<img
+					src="../assets/pause32.png"
+					id="pausebuttonimg"
+					class="pause button"
+					style="display: none"
+				/>
+				<img
+					src="../assets/reset32.png"
+					id="resetbuttonimg"
+					class="reset button"
+					style="display: none"
+				/>
+			</div>
+			<div id="flagtext" class="flagtext" style="font-size: medium; display: none">Laps:</div>
+			<div id="flag" class="flag"></div>
+		</div>
+	</body>
+	<script src="../js/script.js"></script>
+</html>
