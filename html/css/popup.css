@@ -15,7 +15,7 @@ html {
 }
 
 body {
-	width: 250px;
+	width: 300px;
 	height: 400px;
 	max-height: 410px;
 	background-color: var(--main-color) !important;
@@ -35,13 +35,13 @@ body {
 	display: flex;
 	flex-direction: row;
 	position: relative;
-	top: 30px;
+	height: 30px;
+	justify-content: space-evenly;
 	align-items: center;
 }
 
 #playbuttonimg {
 	position: relative;
-	left: 70px;
 }
 
 #timer_playbuttonimg {
@@ -52,12 +52,12 @@ body {
 .cbutton {
 	position: relative;
 	bottom: 20px;
-	padding-left: 25px;
 }
 .button {
 	position: relative;
 	bottom: 20px;
-	padding: 25px;
+	padding: 15px;
+	height: 32px;
 }
 
 .flagtext {
@@ -66,8 +66,9 @@ body {
 	font-size: large;
 	padding-top: 10px;
 	padding-left: 30px;
-	padding-bottom: 10px;
-	top: 10px;
+	padding-bottom: 5px;
+	line-height: 1.5;
+	margin-left: 15px;
 }
 
 .flag {
@@ -76,7 +77,8 @@ body {
 	font-size: large;
 	padding-left: 30px;
 	padding-bottom: 30px;
-	top: 10px;
+	line-height: 1.5;
+	margin-left: 15px;
 }
 
 .button:hover {
@@ -110,7 +112,7 @@ li a {
 }
 ul {
 	position: relative;
-	left: 35%;
+	left: 40%;
 	max-height: 40px;
 	border-radius: 2%;
 	list-style-type: none;

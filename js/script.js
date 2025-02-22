@@ -94,13 +94,15 @@ pause_button_img.addEventListener('click', (event) => {
 flag_button_img.addEventListener('click', (event) => {
 	const prev_flag_content = flag.innerHTML
 	const time = timer_tracker.innerHTML
-
+	const text = prev_flag_content + '<br>' + `${prev_flag_content.split('<br>').length + 1}. ` + time
 	if (prev_flag_content && prev_flag_content !== null && prev_flag_content !== undefined) {
-		storeData({ flag: time + '<br>' + prev_flag_content })
-		flag.innerHTML = time + '<br>' + prev_flag_content
+		storeData({
+			flag: text,
+		})
+		flag.innerHTML = text
 	} else {
-		storeData({ flag: time })
-		flag.innerHTML = time
+		storeData({ flag: '1. ' + time })
+		flag.innerHTML = '1. ' + time
 	}
 })
 
@@ -127,7 +129,7 @@ async function start(time) {
 	flagtext.style.display = 'block'
 	const tracker = setInterval(() => {
 		timer(_start_time_ms)
-	}, 100)
+	}, 1)
 }
 
 async function timer(start_time_ms) {
@@ -149,27 +151,18 @@ async function timer(start_time_ms) {
 		const _ellapsed_min = Math.trunc(_ellapsed_sec / 60)
 		const ellapsed_min = _ellapsed_min % 60
 		const ellapsed_hours = Math.trunc(ellapsed_min / 60)
-		let sec = ellapsed_sec.toString()
-		let min = ellapsed_min.toString()
-		let hours = ellapsed_hours.toString()
-		if (ellapsed_sec < 10) {
-			sec = '0' + ellapsed_sec.toString()
-		}
-		if (ellapsed_min < 10) {
-			min = '0' + ellapsed_min.toString()
-		}
-		if (ellapsed_hours < 10) {
-			hours = '0' + ellapsed_hours.toString()
-		}
-		//console.log(hours + ':' + min + ':' + sec)
+		let sec = ellapsed_sec.toString().padStart(2, '0')
+		let min = ellapsed_min.toString().padStart(2, '0')
+		let hours = ellapsed_hours.toString().padStart(2, '0')
+		let ms = (ellapsed_ms % 1000).toString().padStart(3, '0')
 
-		timer_tracker.innerHTML = hours + ':' + min + ':' + sec
+		timer_tracker.innerHTML = hours + ':' + min + ':' + sec + ':' + ms
 	})
 }
 
 async function storeData(obj) {
 	console.log(obj)
 	await chrome.storage.sync.set(obj, function () {
-		//  Data's been saved boys and girls, go on home
+		console.log('Data saved: ', obj)
 	})
 }
